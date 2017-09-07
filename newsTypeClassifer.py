@@ -65,21 +65,26 @@ targets = newsDF['Type'].values
 classifier.fit(cv_fit, targets)
 
 ### Testing part. 
-## Read the sports news from test folder
-for testSnews, testPnews in zip(os.listdir('./test/sports'), os.listdir('./test/politics')):
-    openTSportsNews = open('./test/sports/' + testSnews, 'r', encoding = 'latin1')
-    readTSportsNews = openTSportsNews.read()
-    openTSportsNews.close()
-    openTPoliticsNews = open('./test/politics/' + testPnews, 'r')
-    readTPoliticsNews = openTPoliticsNews.read()
-    openTPoliticsNews.close()
-    
-    test_example = [readTSportsNews, readTPoliticsNews]
-    example_counts = cv.transform(test_example)
+## The first test a sports news:
+testfile1 = open('./test/sports/test1.txt', 'r')
+file1 = [testfile1.read()]
+print(file1)
+example1 = cv.transform(file1)
+prediction1 = classifier.predict(example1)
+print(prediction1)
 
-    predictions = classifier.predict(example_counts)
+## The second test a politics news:
+testfile2 = open('./test/politics/00765.txt', 'r')
+file2 = [testfile2.read()]
+print(file2)
+example2 = cv.transform(file2)
+prediction2 = classifier.predict(example2)
+print(prediction2)
 
-    print('Expecting: Sports, Politics')
-    print('Actual result: ')
-    print(predictions)
-    
+## The third test a pilitics news:
+testfile3 = open('./test/politics/00035.txt', 'r')
+file3 = [testfile3.read()]
+print(file3)
+example3 = cv.transform(file3)
+prediction3= classifier.predict(example3)
+print(prediction3)
