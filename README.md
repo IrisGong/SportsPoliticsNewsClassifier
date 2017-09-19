@@ -1,4 +1,4 @@
-# SportsPoliticsNewsClassifier
+# Sports and Politics News Classifier
 
 ### Introduction:
 --- 
@@ -14,7 +14,7 @@ RSS feed from CNN, Fox News, and NBC News from Nov. 2016 to Jul. 2017 are used a
 2. Applied CountVecotrizer to find term frequency - inverse document frequency (tf-idf) for all the news.  
 3. Utilized Naive Bayes algorithm with MultinomialNB to train and predict the news articles categories. 
 
-#### Result and Conclusion:
+### Result and Conclusion:
 ---
 Results:<br>
 ##### First article: <br>
@@ -37,5 +37,5 @@ Project result:<br>
 Conclusion:<br>
 As the results show, Naive Bayes algorithm successfully predict the categories of testing news articles. 
 
-Please also see my other projects!
+
 
