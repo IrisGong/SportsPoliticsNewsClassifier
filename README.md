@@ -11,7 +11,7 @@ RSS feed from CNN, Fox News, and NBC News from Nov. 2016 to Jul. 2017 are used a
 ### Data Processing:
 ---
 1. Read sports and politics news from 'train' repository, and made a Pandas DataFrame containing all the news and its category.
-2. Applied CountVecotrizer to find term frequency - inverse document frequency (tf-idf) for all the news.  
+2. Applied CountVectorizer to find term frequency - inverse document frequency (tf-idf) for all the news.  
 3. Utilized Naive Bayes algorithm with MultinomialNB to train and predict the news articles categories. 
 
 ### Result and Conclusion:
